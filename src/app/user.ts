@@ -1,5 +1,4 @@
 export class User {
-  name: string;
-    constructor(public login: string, public userName: string, public avatarUrl: any) {}
-
+// tslint:disable-next-line: variable-name
+    constructor(public login: string, public name: string, public html_url: string, public public_repos: string, public avatar_url: any) {}
 }

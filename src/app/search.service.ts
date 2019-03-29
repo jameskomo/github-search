@@ -11,13 +11,16 @@ export class SearchService {
   repository: Repository;
 
   constructor(private http: HttpClient) {
-    this.user = new User('', '', '');
-    this.repository = new Repository('', '', '', '', '');
+    this.user = new User('', '', '', '', '');
+    this.repository = new Repository('', '', '','');
   }
  searchRequest() {
     interface ApiResponse {
+      login: string;
       name: string;
-      repository: string;
+      html_url: string;
+      public_repos: string;
+      avatar_url: string;
     }
     const promise = new Promise((resolve, reject) => {
       this.http
@@ -25,14 +28,16 @@ export class SearchService {
         .toPromise()
         .then(
           response => {
-            this.user.userName = response.name;
-            this.repository.repoName = response.repository;
+            this.user.login = response.login;
+            this.user.name = response.name;
+            this.user.html_url = response.html_url;
+            this.user.public_repos = response.public_repos;
+            this.user.avatar_url = response.avatar_url;
 
             resolve();
           },
           error => {
-            this.user.userName = 'jameskomo';
-            this.repository.repoName = 'James Komo';
+            this.user.login = 'This user name does not exist';
             reject(error);
           }
         );
