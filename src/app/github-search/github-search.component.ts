@@ -10,7 +10,6 @@ import { User } from '../user';
 })
 export class GithubSearchComponent implements OnInit {
   user: User;
-  search = 'Search Here...';
 
   constructor(private http: HttpClient, private searchService: SearchService) { }
 
@@ -23,11 +22,6 @@ export class GithubSearchComponent implements OnInit {
     this.searchService.searchRequest(username).then((data: any) => {
       console.log(data);
     });
-    // API
-    // tslint:disable-next-line: prefer-const
-    // let url = environment.apiUrl + '/users/' + username + '/repo?access_token=' + environment.access_token;
-    // http.get(url)
-
 
   }
 }
