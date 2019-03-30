@@ -14,7 +14,8 @@ export class SearchService {
     this.user = new User('', '', '', '', '');
     this.repository = new Repository('', '', '', '');
   }
- searchRequest() {
+
+  searchRequest(username) {
     interface ApiResponse {
       login: string;
       name: string;
@@ -24,7 +25,7 @@ export class SearchService {
     }
     const promise = new Promise((resolve, reject) => {
       this.http
-        .get<ApiResponse>(environment.apiUrl)
+        .get<ApiResponse>(environment.apiUrl + username + '/repos')
         .toPromise()
         .then(
           response => {

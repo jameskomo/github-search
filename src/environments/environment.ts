@@ -3,10 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-         production: false,
-         apiUrl: 'https://api.github.com/users/jameskomo/repos',
-         access_token: 'a826798a370e9aaea3d76d77ef7871fcd40292f4'
-       };
+  production: false,
+  apiUrl: 'https://api.github.com/users/',
+  access_token: 'a826798a370e9aaea3d76d77ef7871fcd40292f4'
+};
 
 /*
  * For easier debugging in development mode, you can import the following file
