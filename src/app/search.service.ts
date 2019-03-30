@@ -12,7 +12,7 @@ export class SearchService {
 
   constructor(private http: HttpClient) {
     this.user = new User('', '', '', '', '');
-    this.repository = new Repository('', '', '','');
+    this.repository = new Repository('', '', '', '');
   }
  searchRequest() {
     interface ApiResponse {
@@ -28,12 +28,12 @@ export class SearchService {
         .toPromise()
         .then(
           response => {
-            this.user.login = response.login;
-            this.user.name = response.name;
-            this.user.html_url = response.html_url;
-            this.user.public_repos = response.public_repos;
-            this.user.avatar_url = response.avatar_url;
-
+            this.user.login = response[0].owner.login;
+            this.user.name = response[0].owner.name;
+            this.user.html_url = response[0].owner.html_url;
+            this.user.public_repos = response[0].owner.public_repos;
+            this.user.avatar_url = response[0].owner.avatar_url;
+            console.log(response);
             resolve();
           },
           error => {
