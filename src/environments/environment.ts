@@ -4,7 +4,7 @@
 
 export const environment = {
          production: false,
-         apiUrl: 'https://api.github.com/users/jameskomo/repos',
+         apiUrl: 'https://api.github.com/users/',
          access_token: 'a826798a370e9aaea3d76d77ef7871fcd40292f4'
        };
 

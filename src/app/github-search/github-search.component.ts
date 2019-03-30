@@ -15,11 +15,14 @@ export class GithubSearchComponent implements OnInit {
   constructor(private http: HttpClient, private searchService: SearchService) { }
 
   ngOnInit() {
-    this.searchService.searchRequest(),
     this.user = this.searchService.user;
   }
+
   onSearch(username: string) {
     console.log(`Searching for ${username}`);
+    this.searchService.searchRequest(username).then((data: any) => {
+      console.log(data);
+    });
     // API
 // tslint:disable-next-line: prefer-const
     // let url = environment.apiUrl + '/users/' + username + '/repo?access_token=' + environment.access_token;
