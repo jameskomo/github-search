@@ -8,6 +8,7 @@ export const environment = {
   access_token: 'a826798a370e9aaea3d76d77ef7871fcd40292f4'
 };
 
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
