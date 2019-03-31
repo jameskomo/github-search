@@ -39,7 +39,7 @@
     </div>
     <div class="col-md-4">
       <div class="card border-success mb-3" style="max-width: 20rem;">
-        <div class="card-header">username: {{githubservice.user.userName}}</div>
+        <div class="card-header">username: {{githubservice.user.login}}</div>
         <div class="card-header">location: {{githubservice.user.location}}</div>
         <div class="card-header">email: {{githubservice.user.email}}</div>
         <div class="card-header">Member Since: {{githubservice.user.memberSinceDate|date}}</div>
@@ -59,6 +59,9 @@
         <a target="_blank" href="{{githubservice.repos$[i].html_url}}">
           {{i+1}} . {{githubservice.repos$[i].name}}
         </a>
+        <p><strong>Project Description</strong></p>
+        <p>{{githubservice.repos$[i].description}}</p>
+        
         <button class="btn btn-primary">{{githubservice.repos$[i].watchers}} watchers</button>
         <button class="btn btn-success">{{githubservice.repos$[i].forks}} forks</button>
       </li>
