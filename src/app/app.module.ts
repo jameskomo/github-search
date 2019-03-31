@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { GithubNavComponent } from './github-nav/github-nav.component';
 import { GithubUserProfileComponent } from './github-user-profile/github-user-profile.component';
 import { DayCountPipe } from './day-count.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubNavComponent,
     GithubUserProfileComponent,
-    DayCountPipe
+    DayCountPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
