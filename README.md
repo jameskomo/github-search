@@ -1,27 +1,46 @@
-# GithubSearch
+# About GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+This project allows users to enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
 
-## Development server
+## Setup Installation Requirement
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To access this project, you will need to access it from github then clone it. Then run 'git clone https://github.com/jameskomo/github-search.git' on your terminal
 
-## Code scaffolding
+## Demo Website
+To test this website here is a live demo of the site https://jameskomo.github.io/github-search/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+You need a smartphone, laptop, desktop or any gadget sreen accessible to internet. Open from a friendly browser.
 
-## Build
+## Site Stories
+<To insert Images of Final Site>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Behavior Driven Development
 
-## Running unit tests
+| Input                     | Output                                                                                                                                                                           |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| User Loads Page           | On loading the landing page, the user can see a search bar that they can type a repo or GitHub user name                                                                         |
+| User Types in Search Bar  | On keyup function, the page is populated with possible user profiles as they type. On typing full username/repository name, the page is populated with all relevant GitHub links |
+| User Clicks Repo Name     | The page navigates to the relevant repository on GitHub                                                                                                                          |
+| User Selects NavBar items | The various nav items route to various components based on routing module declarations                                                                                           |
+| User types wrong address  | The Not-found page is loaded                                                                                                                                                     |
+| User clears search Box    | The page reloads and is populated with new details as typed by user                                                                                                              |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+-IDEs: Atom, VScode and Sublime Editor 
+-Browsers include either: Google Chrome, Mozilla Firefox, Opera, Edge. 
+-Stack: TypeScript, Angular, Bootstrap 4.0, HTML5 & CSS3.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+
+## Known Bugs
+
+No known bugs,but if you come across feel free to contact us through provided contacts.
+
+## License Information
+
+Refer to License File on project folder
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+For any enquiries, feel free to reach me on Skype: james.komo or email me at james.komoh@gmail.com
