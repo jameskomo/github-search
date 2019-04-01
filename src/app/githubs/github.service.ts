@@ -32,20 +32,20 @@ export class GithubService {
           .get<userInfo>(environment.apiUrl + username + '/repos')
           .toPromise()
           .then(
-            githubData => {
+            response => {
               this.user = new Users(
-                githubData.login,
-                githubData.location,
-                githubData.followers,
-                githubData.following,
-                githubData.created_at,
-                githubData.email,
-                githubData.avatar_url,
-                githubData.public_repos
+                response.login,
+                response.location,
+                response.followers,
+                response.following,
+                response.created_at,
+                response.email,
+                response.avatar_url,
+                response.public_repos
               );
 
               // console.log(this.user)
-              console.log(githubData);
+              console.log(response);
 
               resolve();
             },

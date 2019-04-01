@@ -9,6 +9,7 @@ import { GithubNavComponent } from './github-nav/github-nav.component';
 import { GithubUserProfileComponent } from './github-user-profile/github-user-profile.component';
 import { DayCountPipe } from './day-count.pipe';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UnderlineDirective } from './underline.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GithubNavComponent,
     GithubUserProfileComponent,
     DayCountPipe,
-    NotFoundComponent
+    NotFoundComponent,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,
